@@ -49,7 +49,7 @@ const FinalResumePage = () => {
     const htmlContent = element.innerHTML;
 
     // استخدم API لتحويل HTML إلى Word
-    const API_KEY = "d6eee96e-fcec-485e-94c0-2914b55f8d36";
+    const API_KEY = import.meta.env.VITE_API2PDF_KEY;
 
     // إنشاء محتوى HTML كامل مع CSS
     const themesCss = `

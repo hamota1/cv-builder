@@ -37,8 +37,7 @@ const FinalResumePage = () => {
   };
 
   const handleApiDownload = async () => {
-    // استبدل "YOUR_API_KEY_HERE" بالمفتاح الذي حصلت عليه
-    const API_KEY = "d6eee96e-fcec-485e-94c0-2914b55f8d36";
+    const API_KEY = import.meta.env.VITE_API2PDF_KEY;
 
     // 1. احصل على كود الـ HTML للسيرة الذاتية
     const resumeElement = document.getElementById("resume-preview-area");
@@ -275,8 +274,7 @@ const FinalResumePage = () => {
     // الحصول على محتوى HTML
     const htmlContent = element.innerHTML;
 
-    // استخدم API لتحويل HTML إلى PDF
-    const API_KEY = "d6eee96e-fcec-485e-94c0-2914b55f8d36";
+    const API_KEY = import.meta.env.VITE_API2PDF_KEY;
 
     // إنشاء محتوى HTML كامل مع CSS
     const themesCss = `
