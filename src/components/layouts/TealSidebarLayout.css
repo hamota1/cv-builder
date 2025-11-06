@@ -1,0 +1,146 @@
+
+.tsl-container {
+    display: flex;
+    font-family: var(--font-family), Arial, sans-serif;
+    font-size: var(--font-size);
+    line-height: var(--line-height);
+    letter-spacing: var(--letter-spacing);
+    background-color: #f0f2f5; /* Light background for the whole page */
+    min-height: 1122px; /* A4 height */
+}
+
+/* --- Left Sidebar --- */
+.tsl-left-sidebar {
+    flex-basis: 35%;
+    background-color: #004D40; /* Dark Teal */
+    color: #FFFFFF;
+    padding: 2rem 1.5rem;
+    flex-shrink: 0;
+}
+
+.tsl-profile-picture-container {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.tsl-profile-picture {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #E6A84F; /* Thin gold border */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.tsl-personal-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.tsl-personal-header h1 {
+    font-size: 2rem;
+    margin: 0 0 0.5rem 0;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.tsl-personal-header h2 {
+    font-size: 1.1rem;
+    margin: 0 0 1rem 0;
+    text-transform: uppercase;
+    font-weight: normal;
+    color: #a0c0e0;
+}
+
+.tsl-contact-info p {
+    font-size: 0.9rem;
+    margin: 0.5rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tsl-icon {
+    margin-right: 0.5rem;
+    color: #E6A84F; /* Gold accent for icons */
+}
+
+/* --- Right Main Content --- */
+.tsl-right-main-content {
+    flex-basis: 65%;
+    background-color: #ffffff;
+    padding: 2rem 2.5rem;
+}
+
+.tsl-main-header {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #E6A84F; /* Gold accent divider */
+}
+
+.tsl-main-header h1 {
+    font-size: 2.8rem;
+    margin: 0 0 0.5rem 0;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #333;
+}
+
+.tsl-main-header h2 {
+    font-size: 1.2rem;
+    margin: 0 0 1rem 0;
+    text-transform: uppercase;
+    font-weight: normal;
+    color: #555;
+}
+
+.tsl-main-header .tsl-contact-info p {
+    font-size: 0.9rem;
+    margin: 0.2rem 0;
+    display: inline-flex; /* Keep contact info inline */
+    align-items: center;
+    margin-right: 1.5rem;
+}
+
+.tsl-main-header .tsl-icon {
+    color: #333; /* Dark icons for main content */
+}
+
+/* --- Section Styling --- */
+.tsl-section {
+    margin-bottom: var(--section-spacing);
+}
+
+.tsl-section h3 {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: #FFFFFF; /* White for sidebar titles */
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #E6A84F; /* Gold accent divider */
+    padding-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.tsl-section h3 .tsl-section-icon {
+    margin-right: 0.5rem;
+    font-size: 1rem;
+}
+
+.tsl-left-sidebar .tsl-section h3 .tsl-section-icon {
+    color: #FFFFFF; /* White icons for sidebar sections */
+}
+
+.tsl-right-main-content .tsl-section h3 .tsl-section-icon {
+    color: #333; /* Dark icons for main content sections */
+}
+
+.tsl-right-main-content .tsl-section h3 {
+    color: #333; /* Dark color for main content titles */
+    border-bottom: 1px solid #E6A84F; /* Gold accent divider */
+    padding-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+}

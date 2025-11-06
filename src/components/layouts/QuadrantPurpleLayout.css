@@ -1,0 +1,75 @@
+
+.quadrant-purple-container {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    grid-template-rows: auto 1fr;
+    min-height: 100vh;
+    font-family: var(--font-family), sans-serif;
+    font-size: var(--font-size);
+    line-height: var(--line-height);
+    letter-spacing: var(--letter-spacing);
+}
+
+.quadrant-top-left {
+    background-color: #D9C4E8;
+    padding: 2rem 2rem 8rem 2rem; /* Increased bottom padding */
+    color: #3C006B;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.quadrant-top-right {
+    background-color: #f4f4f4;
+    padding: 6rem 2rem 8rem 2rem; /* Adjusted top padding */
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.quadrant-bottom-left {
+    background-color: #f4f4f4;
+    padding: 2rem;
+    color: #3C006B;
+}
+
+.quadrant-bottom-right {
+    background-color: #FFFFFF;
+    padding: 2rem;
+}
+
+.quadrant-purple-container h1, .quadrant-purple-container h2, .quadrant-purple-container h3, .quadrant-purple-container h4 {
+    color: #3C006B;
+}
+
+.quadrant-top-right h3, .quadrant-bottom-right h3 {
+    color: #333;
+}
+
+.hexagon-icon {
+    margin-bottom: 1rem;
+}
+
+.hexagon-icon svg {
+    stroke: #3C006B;
+}
+
+.contact-info p {
+    margin: 0.25rem 0;
+}
+
+.quadrant-section {
+    margin-bottom: var(--section-spacing);
+}
+
+.quadrant-section h3 {
+    font-size: 1.3rem;
+    border-bottom: 2px solid #3C006B;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.quadrant-top-right .quadrant-section h3, .quadrant-bottom-right .quadrant-section h3 {
+    border-bottom-color: #ccc;
+}
+
+ul {
+    padding-left: 0;
+    list-style-type: none;
+}

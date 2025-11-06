@@ -1,0 +1,1225 @@
+/* --- Base Resume Styles --- */
+.resume-container {
+  background: #fff;
+  color: #333;
+  font-family: var(--font-family, 'Roboto', sans-serif);
+  font-size: var(--font-size, 16px);
+  line-height: var(--line-height, 1.5);
+  letter-spacing: var(--letter-spacing, 0px);
+  min-height: 100vh; /* Ensure it takes full viewport height */
+  box-shadow: 0 0 15px rgba(0,0,0,0.15);
+  position: relative;
+  display: flex; /* Enable flexbox */
+  flex-direction: row; /* Arrange children in a row */
+  align-items: stretch; /* Make children stretch to same height */
+  box-sizing: border-box; /* Include padding in element's total width and height */
+}
+
+.resume-container section {
+  margin-bottom: var(--section-spacing, 20px);
+}
+
+/* Common Layout Elements */
+.header-content {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.header-text {
+  flex: 1;
+}
+
+.contact-row, .contact-grid {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+}
+
+.profile-section {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Icon styles for contact information */
+.fas {
+  margin-right: 0.5rem;
+  opacity: 0.7;
+}
+
+/* Responsive adjustments */
+@media print {
+  .resume-container {
+    box-shadow: none;
+    margin: 0;
+    padding: 0.25in;
+  }
+}
+
+.resume-container h1, .resume-container h2, .resume-container h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+}
+
+/* Resume Layout Common Styles */
+.resume-container .sidebar {
+  width: 30%;
+  padding: 1.5rem;
+}
+
+.resume-container .main-content {
+  flex-grow: 1; /* Take up remaining space */
+  padding: 1.5rem;
+}
+
+.resume-container .experience-item,
+.resume-container .education-item {
+  margin-bottom: 1.5rem;
+}
+
+.resume-container .skill-item,
+.resume-container .language-item {
+  display: inline-block;
+  margin: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+}
+
+.resume-container .dates {
+  color: #666;
+  font-size: 0.9em;
+}
+
+.resume-container .achievements {
+  margin-top: 0.5rem;
+  padding-left: 1.2rem;
+}
+
+/* Format paragraphs with bullet points */
+.resume-container .achievements li {
+  margin-bottom: 0.75rem;
+  line-height: 1.6;
+  list-style-type: disc;
+  list-style-position: inside;
+}
+
+/* Ensure proper spacing between paragraphs */
+.resume-container .achievements p {
+  margin-bottom: 1rem;
+  text-indent: 1.5em;
+}
+
+.resume-container .achievements p:first-child {
+  margin-top: 0.5rem;
+}
+
+.profile-image img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 1rem;
+  display: block;
+  border: 3px solid var(--border-color);
+}
+
+.header-photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 4px;
+  object-fit: cover;
+  margin-right: 2rem;
+  border: 3px solid var(--border-color);
+}
+
+.profile-photo {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #fff;
+}
+
+.header-bar img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 1.5rem;
+  border: 2px solid var(--border-color);
+}
+
+.profile-section img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 1.5rem;
+  display: block;
+  border: 2px solid var(--border-color);
+}
+
+.progress-bar-container {
+  margin-bottom: 1rem;
+}
+
+.progress-bar-label {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background-color: #e0e0e0;
+  border-radius: 4px;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background-color: var(--border-color);
+  border-radius: 4px;
+}
+
+.resume-container ul {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.resume-container .contact-info p {
+  margin: 0.5rem 0;
+}
+
+/* --- THEMES (BATCH 1) --- */
+
+/* 1. Theme: Teal Sidebar (Ryan Reynolds) */
+.theme-teal {
+  --border-color: #FFD700;
+}
+.theme-teal .sidebar { background-color: #004D40; color: #E0F2F1; }
+.theme-teal .sidebar h2 { color: #B2DFDB; }
+.theme-teal .main-content h2 { color: #004D40; }
+
+/* 2. Theme: Gold Sidebar (John James Doe) */
+.theme-gold {
+  --border-color: #D4AF37;
+  font-family: var(--font-family, 'Montserrat', sans-serif);
+  font-size: var(--font-size, 16px);
+  line-height: var(--line-height, 1.5);
+  letter-spacing: var(--letter-spacing, 0px);
+}
+.theme-gold .sidebar { background-color: #1A1A1A; color: #F0F0F0; }
+.theme-gold h2, .theme-gold .timeline-dot { color: #D4AF37; }
+.theme-gold section {
+  margin-bottom: var(--section-spacing, 20px);
+}
+
+/* 3. Theme: Blue Sidebar (Name and Surname) */
+.theme-blue {
+  --border-color: #154360;
+}
+.theme-blue .sidebar { background-color: #D6EAF8; color: #154360; }
+.theme-blue h2 { color: #154360; border-bottom: 2px solid #154360; }
+
+/* 4. Theme: Purple Sidebar (Chris Johnson) */
+.theme-purple {
+  --border-color: #6A0DAD;
+}
+.theme-purple .sidebar { background-color: #F2E7FE; color: #3C006B; }
+.theme-purple h2, .theme-purple .icon { color: #6A0DAD; }
+
+/* 5. Theme: Academic Minimalist (Gilbert Lacroix) */
+.theme-minimal-green {
+  --border-color: #004D40;
+  font-family: 'Times New Roman', serif;
+}
+.theme-minimal-green h2 { color: #004D40; border-bottom: 1px solid #004D40; }
+
+/* 6. Theme: Modern Bold (Sam Mcdonald) */
+.theme-modern-teal {
+  --border-color: #00796B;
+}
+.theme-modern-teal h1, .theme-modern-teal h2 { color: #00796B; }
+.theme-modern-teal .job-title { color: #333; font-weight: bold; }
+
+/* 7. Theme: Harvard Red Accent (YOUR NAME) */
+.theme-red-accent {
+  --border-color: #FF1A1A;
+}
+.theme-red-accent h1 { color: #000; }
+.theme-red-accent h2, .theme-red-accent .contact-info { color: #FF1A1A; }
+
+/* 8. Theme: Center-Split (Robert James) - NEW IMPLEMENTATION */
+
+.theme-center-split {
+
+  --accent-color: #5F737C; /* Dark Slate Grey/Cadet Grey */
+
+  --body-text-color: #333333; /* Dark Grey */
+
+  --light-grey-bg: #F5F5F5; /* Off-white */
+
+  --white-bg: #FFFFFF; /* White */
+
+}
+
+
+
+/* Base styles for the resume container */
+
+.theme-center-split.resume-container {
+
+  background-color: var(--light-grey-bg); /* Light grey background for the whole page */
+
+  display: block; /* Important: Override flex from base to manage layout with position */
+
+  min-height: 100vh;
+
+  position: relative;
+
+  width: 8.5in; /* Keep fixed width */
+
+  margin: 0 auto; /* Center the resume */
+
+  box-shadow: 0 0 15px rgba(0,0,0,0.15);
+
+  padding: 0; /* Remove padding from container itself */
+
+}
+
+
+
+/* Header Block with Curved Edge */
+
+.theme-center-split .header-split-top {
+
+  background-color: var(--white-bg);
+
+  padding: 2rem 1.5rem 2rem 1.5rem; /* Reduced padding-bottom */
+
+  position: relative;
+
+  /* Curved bottom edge */
+
+  border-bottom-left-radius: 50% 20%;
+
+  border-bottom-right-radius: 50% 20%;
+
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+
+  margin-bottom: 6rem; /* Increased margin-bottom to compensate for image overlap */
+
+  overflow: hidden; /* Important for containing rounded corners reliably */
+
+}
+
+
+
+.theme-center-split .header-content-split {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: flex-start;
+
+  position: relative;
+
+  z-index: 1; /* Ensure content is above curved edge */
+
+}
+
+
+
+.theme-center-split .header-center-text {
+
+  text-align: center;
+
+  flex-grow: 1;
+
+  margin: 0 2rem;
+
+}
+
+
+
+.theme-center-split .header-split-top h1 {
+
+  font-family: 'Montserrat', sans-serif;
+
+  font-weight: 700; /* Bold/Heavy */
+
+  font-size: 2.8rem; /* Very large */
+
+  color: var(--accent-color);
+
+  text-transform: uppercase;
+
+  letter-spacing: 3px; /* Wide letter spacing */
+
+  margin: 0;
+
+  line-height: 1.2;
+
+}
+
+
+
+.theme-center-split .job-title-wrapper {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  margin-top: 0.5rem;
+
+}
+
+
+
+.theme-center-split .job-title-line {
+
+  display: block;
+
+  width: 30px;
+
+  height: 1px;
+
+  background-color: var(--accent-color);
+
+  margin: 0 10px;
+
+}
+
+
+
+.theme-center-split .header-split-top .job-title {
+
+  font-family: 'Montserrat', sans-serif;
+
+  font-weight: 300; /* Light */
+
+  font-size: 1.1rem; /* Medium */
+
+  color: var(--accent-color);
+
+  text-transform: uppercase;
+
+  margin: 0;
+
+}
+
+
+
+.theme-center-split .contact-info-split {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 0.5rem;
+
+  font-size: 0.9rem;
+
+  color: var(--body-text-color);
+
+}
+
+
+
+.theme-center-split .contact-info-split p {
+
+  margin: 0;
+
+  display: flex;
+
+  align-items: center;
+
+}
+
+
+
+.theme-center-split .contact-info-split i {
+
+  color: var(--accent-color); /* Icons in accent color */
+
+  margin-right: 0.5rem;
+
+  font-size: 1rem;
+
+}
+
+
+
+.theme-center-split .profile-image-split-container {
+
+  position: absolute;
+
+  bottom: -75px; /* Half of image height (150px) to overlap the curved edge */
+
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 150px; /* Size of the circular image */
+
+  height: 150px;
+
+  border-radius: 50%;
+
+  overflow: hidden;
+
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+
+  z-index: 2; /* Ensure image is above header and content */
+
+  background-color: var(--white-bg); /* Background for the circle itself to cover */
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+}
+
+
+
+.theme-center-split .profile-image-split {
+
+  width: 140px; /* Image size slightly smaller than container to show border */
+
+  height: 140px;
+
+  border-radius: 50%;
+
+  object-fit: cover;
+
+  border: 3px solid var(--accent-color); /* Accent color border */
+
+}
+
+
+
+/* Content Columns Layout */
+
+.theme-center-split .split-content-grid {
+
+  display: grid !important;
+
+  grid-template-columns: 1fr 1.5fr !important; /* Left column 1 part, Right column 1.5 parts */
+
+  gap: 30px; /* Space between columns */
+
+  padding: 2rem 0; /* Padding for content below header and image */
+
+  align-items: flex-start; /* Align columns at the top */
+
+}
+
+
+
+.theme-center-split .column-left-grid,
+
+.theme-center-split .column-right-grid {
+
+  padding: 0 1.5rem; /* Padding within columns */
+
+}
+
+
+
+/* Remove the border as gap provides separation */
+
+.theme-center-split .column-left-grid {
+
+  border-right: none;
+
+}
+
+
+
+.theme-center-split section {
+
+  margin-bottom: 2rem;
+
+}
+
+
+
+.theme-center-split h2 {
+
+  font-family: 'Montserrat', sans-serif;
+
+  font-weight: 700; /* Bold */
+
+  font-size: 1.4rem; /* Medium-large */
+
+  color: var(--accent-color);
+
+  text-transform: uppercase;
+
+  margin-top: 0;
+
+  margin-bottom: 1rem;
+
+  display: flex;
+
+  align-items: center;
+
+  white-space: nowrap; /* Prevent icon and text from wrapping prematurely */
+
+}
+
+
+
+.theme-center-split h2 i {
+
+  margin-right: 0.8rem;
+
+  font-size: 1.5rem;
+
+  color: var(--accent-color); /* Icon color */
+
+}
+
+
+
+.theme-center-split h2::after {
+
+  content: '';
+
+  display: block;
+
+  flex-grow: 1; /* Take up remaining space */
+
+  height: 1px;
+
+  background-color: var(--accent-color);
+
+  margin-left: 1rem;
+
+}
+
+
+
+.theme-center-split p,
+
+.theme-center-split li {
+
+  font-size: 0.9rem;
+
+  color: var(--body-text-color);
+
+  line-height: 1.6;
+
+}
+
+
+
+/* Skill Bars (Slider-style) */
+
+.theme-center-split .skill-item-split {
+
+  margin-bottom: 1.5rem;
+
+}
+
+
+
+.theme-center-split .skill-name-split {
+
+  font-weight: 600;
+
+  margin-bottom: 0.5rem;
+
+  color: var(--body-text-color);
+
+}
+
+
+
+.theme-center-split .skill-bar-split-container {
+
+  width: 100%;
+
+  height: 6px; /* Track height */
+
+  background-color: rgba(0,0,0,0.1); /* Light grey track */
+
+  border-radius: 3px;
+
+  position: relative;
+
+}
+
+
+
+.theme-center-split .skill-bar-split-fill {
+
+  height: 100%;
+
+  background-color: var(--accent-color); /* Progress bar color */
+
+  border-radius: 3px;
+
+  position: relative;
+
+}
+
+
+
+.theme-center-split .skill-bar-split-handle {
+
+  width: 16px;
+
+  height: 16px;
+
+  background-color: var(--white-bg); /* White handle */
+
+  border: 2px solid var(--accent-color); /* Accent color border */
+
+  border-radius: 50%;
+
+  position: absolute;
+
+  right: -8px; /* Half of handle width to center it */
+
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+
+}
+
+
+
+/* Timeline for Experience and Education */
+
+.theme-center-split .timeline-split-container {
+
+  position: relative;
+
+  padding-left: 25px; /* Space for the vertical line */
+
+  margin-left: 5px;
+
+}
+
+
+
+.theme-center-split .timeline-split-container::before {
+
+  content: '';
+
+  position: absolute;
+
+  left: 0; top: 0; bottom: 0; /* Position full height */
+
+  width: 2px;
+
+  background-color: var(--accent-color); /* Accent color vertical line */
+
+}
+
+
+
+.theme-center-split .timeline-split-item {
+
+  position: relative;
+
+  margin-bottom: 2rem;
+
+  padding-left: 20px; /* Space for the dot */
+
+}
+
+
+
+.theme-center-split .timeline-split-dot {
+
+  position: absolute;
+
+  left: -7px; /* Position the dot on the line */
+
+  top: 0.3rem;
+
+  width: 14px;
+
+  height: 14px;
+
+  background-color: var(--accent-color); /* Accent color circular dot */
+
+  border-radius: 50%;
+
+  box-shadow: 0 0 0 3px var(--light-grey-bg); /* Light grey border around dot */
+
+}
+
+
+
+.theme-center-split .timeline-split-content {
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  align-items: baseline;
+
+}
+
+
+
+.theme-center-split .timeline-split-content h3 {
+
+  flex-basis: 40%; /* Role/Degree on the left */
+
+  font-size: 1.1rem;
+
+  font-weight: 700;
+
+  color: var(--body-text-color);
+
+  margin-bottom: 0.25rem;
+
+  padding-right: 1rem; /* Add some space */
+
+}
+
+
+
+.theme-center-split .timeline-split-content .right-content {
+
+  flex-basis: 60%; /* Dates, Company/University, Achievements on the right */
+
+  display: flex;
+
+  flex-direction: column;
+
+}
+
+
+
+.theme-center-split .timeline-split-content .timeline-split-dates {
+
+  font-weight: 600;
+
+  color: var(--body-text-color);
+
+  margin-bottom: 0.25rem;
+
+}
+
+
+
+.theme-center-split .timeline-split-content p {
+
+  font-size: 0.85rem;
+
+  color: var(--body-text-color);
+
+  margin-bottom: 0.5rem;
+
+}
+
+
+
+.theme-center-split .timeline-split-content .achievements {
+
+  padding-left: 0;
+
+}
+
+
+
+.theme-center-split .timeline-split-content .achievements ul {
+
+  list-style-type: disc;
+
+  padding-left: 1.2rem;
+
+  margin-top: 0.5rem;
+
+}
+
+
+
+.theme-center-split .timeline-split-content .achievements li {
+
+  font-size: 0.85rem;
+
+  color: var(--body-text-color);
+
+  margin-bottom: 0.5rem;
+
+}
+
+
+
+
+
+/* 9. Theme: Bold Header (Mary Smith) */
+.theme-block-black {
+  --border-color: #000;
+}
+.theme-block-black .header-block { background: #000; color: #fff; }
+.theme-block-black h1 { font-family: 'Impact', sans-serif; }
+.theme-block-black h2 { border-bottom: 2px solid #000; }
+
+/* 10. Theme: Visual Top Block (Cirsten Jobs) */
+.theme-visual-gold .header-visual { background: #D4AF37; }
+.theme-visual-gold .main-content { border-left: 2px solid #D4AF37; }
+.theme-visual-gold h2 { color: #333; }
+
+/* --- THEMES (BATCH 2) --- */
+
+/* 11. Theme: Graphic Designer Yellow (Nina Lane) */
+.theme-visual-yellow {
+  --border-color: #F7B801;
+}
+.theme-visual-yellow .sidebar { background-color: #333A45; color: #F0F0F0; }
+.theme-visual-yellow .sidebar-header { background-color: #F7B801; }
+.theme-visual-yellow h2, .theme-visual-yellow .icon { color: #F7B801; }
+
+/* 12. Theme: Marketing Pro Blue (Richard Sanchez) */
+.theme-classic-blue {
+  --border-color: #003366;
+}
+.theme-classic-blue .sidebar { background-color: #003366; color: #FFFFFF; }
+.theme-classic-blue .sidebar h2 { border-bottom: 1px solid #FFFFFF; }
+.theme-classic-blue .main-content h1, .theme-classic-blue .main-content h2 { color: #003366; }
+
+/* 13. Theme: Corporate Green (Melanie Robinson) */
+.theme-corporate-green {
+  --border-color: #4A6D4A;
+}
+.theme-corporate-green .header-bar { background-color: #4A6D4A; color: #FFFFFF; }
+.theme-corporate-green .summary-panel { background-color: #F0F0F0; }
+.theme-corporate-green .main-content h2 { color: #4A6D4A; }
+
+/* 14. Theme: Software Engineer Pro (Your Name) */
+.theme-pro-darkblue {
+  --border-color: #64FFDA;
+}
+.theme-pro-darkblue .sidebar { background-color: #0A192F; color: #CCD6F6; }
+.theme-pro-darkblue .sidebar h1 { color: #FFFFFF; }
+.theme-pro-darkblue .sidebar h2 { color: #64FFDA; }
+
+/* 15. Theme: Soft Peach (Christine Smith) */
+.theme-soft-peach {
+  --border-color: #FFCBA4;
+}
+.theme-soft-peach .header-bar { background-color: #FFCBA4; color: #4A4A4A; }
+.theme-soft-peach .summary-panel { background-color: #F5F5F5; }
+.theme-soft-peach .main-content h2 { color: #D95C00; }
+
+
+/* 17. Theme: Ultra Minimalist (CV Template Simple) */
+.theme-ultra-minimal {
+  --border-color: #000;
+}
+.theme-ultra-minimal {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+.theme-ultra-minimal h1, .theme-ultra-minimal .job-title, .theme-ultra-minimal .contact-row {
+  text-align: center;
+}
+.theme-ultra-minimal h2 {
+  text-align: center;
+  border-bottom: 1px solid #000;
+  font-weight: 500;
+}
+.theme-ultra-minimal .experience-item .dates, .theme-ultra-minimal .education-item .year {
+  float: right;
+}
+
+/* 18. Theme: Bold Yellow Sidebar (NAME SURNAME) */
+.theme-sidebar-yellow-header {
+  --border-color: #FFD700;
+}
+.theme-sidebar-yellow-header .sidebar { background-color: #FFD700; color: #1A1A1A; }
+.theme-sidebar-yellow-header .name-block { background: #1A1A1A; color: #FFFFFF; }
+.theme-sidebar-yellow-header .main-content h2 { border-bottom: 2px solid #FFD700; }
+
+/* 19. Theme: Elegant Serif (Thomas Hamptone) */
+.theme-serif-minimal {
+  --border-color: #E0E0E0;
+}
+.theme-serif-minimal { font-family: 'Times New Roman', Times, serif; }
+.theme-serif-minimal .narrow-sidebar { background: #F9F9F9; border-right: 1px solid #E0E0E0; }
+.theme-serif-minimal h1, .theme-serif-minimal h2 { font-weight: 400; border-bottom: 1px solid #E0E0E0; }
+
+/* 20. Theme: Simple Quadrant (Dani Schwaiger) */
+.theme-simple-quadrant {
+  --border-color: #D0D0D0;
+}
+.theme-simple-quadrant .quadrant-1, .theme-simple-quadrant .quadrant-3 { border-right: 1px solid #D0D0D0; }
+.theme-simple-quadrant .quadrant-1, .theme-simple-quadrant .quadrant-2 { border-bottom: 1px solid #D0D0D0; }
+
+/* New Sections Styling */
+.resume-container .project-item,
+.resume-container .volunteer-item,
+.resume-container .reference-item {
+  margin-bottom: 1.5rem;
+}
+
+.resume-container .project-item h3,
+.resume-container .volunteer-item h3,
+.resume-container .reference-item h3 {
+  margin-bottom: 0.25rem;
+}
+
+.resume-container .project-images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.resume-container .project-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 4px;
+  border: 1px solid #eee;
+}
+
+/* Executive Gold Sidebar Enhancements */
+.theme-gold .main-content {
+  background-color: #F5F5F5; /* Off-white/Light Grey */
+  color: #1A1A1A; /* Dark text for main content */
+}
+
+.theme-gold h1 {
+  font-family: 'Montserrat', sans-serif; /* Ensure Montserrat is used */
+  font-weight: 900; /* Heavy/Black */
+  font-size: 2.5rem; /* Large size */
+  color: #1A1A1A; /* Dark text */
+  text-transform: uppercase; /* ALL CAPS */
+  letter-spacing: 2px; /* Wide letter spacing */
+  text-align: center; /* Center align name */
+  margin-bottom: 0.5rem;
+}
+
+.theme-gold .job-title {
+  font-family: 'Montserrat', sans-serif; /* Ensure Montserrat is used */
+  font-weight: 300; /* Light */
+  font-size: 0.9rem; /* Small size */
+  color: #1A1A1A; /* Dark text */
+  text-transform: uppercase; /* ALL CAPS */
+  text-align: center; /* Center align job title */
+  margin-bottom: 1.5rem;
+}
+
+.theme-gold .sidebar h2,
+.theme-gold .main-content h2 {
+  font-family: 'Montserrat', sans-serif; /* Ensure Montserrat is used */
+  font-weight: 700; /* Bold/Heavy */
+  font-size: 1.2rem; /* Medium size */
+  text-transform: uppercase; /* ALL CAPS */
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.25rem;
+  position: relative;
+}
+
+.theme-gold .sidebar h2 {
+  color: #FFFFFF; /* White for sidebar titles */
+}
+
+.theme-gold .main-content h2 {
+  color: #1A1A1A; /* Dark for main content titles */
+  margin-top: var(--section-spacing, 20px);
+}
+
+/* Gold separator line for section titles */
+.theme-gold h2::after {
+  content: '';
+  display: block;
+  width: 50px; /* Short line */
+  height: 3px;
+  background-color: var(--border-color); /* Gold accent color */
+  margin-top: 5px;
+}
+
+/* Body text colors */
+.theme-gold .sidebar p,
+.theme-gold .sidebar li {
+  color: #E0E0E0; /* Light grey for sidebar text */
+}
+
+.theme-gold .main-content p,
+.theme-gold .main-content li {
+  color: #1A1A1A; /* Dark for main content text */
+}
+
+.theme-gold .main-content .summary,
+.theme-gold .main-content .experience,
+.theme-gold .main-content .education,
+.theme-gold .main-content .projects,
+.theme-gold .main-content .volunteer,
+.theme-gold .main-content .references,
+.theme-gold .main-content .certifications {
+  margin-bottom: var(--section-spacing, 20px);
+}
+
+/* Rhombus Profile Picture */
+.theme-gold .profile-image-rhombus-container {
+  width: 200px; /* Size of the outer container */
+  height: 200px;
+  margin: 0 auto 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Hide parts of the frame that extend beyond the container */
+}
+
+.theme-gold .profile-image-rhombus-frame {
+  width: 140px; /* Size of the inner gold frame */
+  height: 140px;
+  background-color: var(--border-color); /* Gold color */
+  transform: rotate(45deg); /* Rotate to form a rhombus */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Clip the image inside */
+}
+
+.theme-gold .profile-image-rhombus {
+  width: 160px; /* Image size, slightly larger to fill the rotated frame */
+  height: 160px;
+  object-fit: cover;
+  transform: rotate(-45deg); /* Rotate image back to upright */
+  border-radius: 0; /* Ensure no default border-radius */
+}
+
+/* Skill Bars */
+.theme-gold .skill-item-gold {
+  margin-bottom: 0.75rem;
+}
+
+.theme-gold .skill-name {
+  margin-bottom: 0.25rem;
+  font-weight: 500;
+}
+
+.theme-gold .skill-bar-gold-container {
+  width: 100%;
+  height: 4px; /* Thin bottom line */
+  background-color: var(--border-color); /* Gold */
+  position: relative;
+}
+
+.theme-gold .skill-bar-gold-fill {
+  height: 8px; /* Thicker top line */
+  background-color: var(--border-color); /* Gold */
+  position: absolute;
+  top: -2px; /* Adjust to cover the thin line and appear centered */
+  left: 0;
+}
+
+/* Contact Icons */
+.theme-gold .contact-info p {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.theme-gold .contact-info i {
+  color: #FFFFFF; /* White icons */
+  margin-right: 0.5rem;
+  font-size: 1rem;
+}
+
+/* Timeline for Experience and Education */
+.theme-gold .timeline-container {
+  position: relative;
+  padding-left: 20px; /* Space for the vertical line */
+  margin-left: 10px;
+}
+
+.theme-gold .timeline-container::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: var(--border-color); /* Gold vertical line */
+}
+
+.theme-gold .timeline-item {
+  position: relative;
+  margin-bottom: var(--section-spacing, 1.5rem);
+  padding-left: 20px; /* Space for the dot */
+}
+
+.theme-gold .timeline-dot {
+  position: absolute;
+  left: -6px; /* Position the dot on the line */
+  top: 0.2rem;
+  width: 12px;
+  height: 12px;
+  background-color: var(--border-color); /* Gold square dot */
+  transform: rotate(45deg); /* Make it a square rotated */
+  border-radius: 2px; /* Slightly rounded corners for the square */
+}
+
+.theme-gold .timeline-content {
+  border-bottom: 1px solid #E0E0E0; /* Thin light grey horizontal separator */
+  padding-bottom: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.theme-gold .timeline-item:last-child .timeline-content {
+  border-bottom: none; /* No separator for the last item */
+}
+
+.theme-gold .timeline-content h3 {
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+  color: #1A1A1A;
+}
+
+.theme-gold .timeline-content p {
+  font-size: 0.85rem;
+  margin-bottom: 0.25rem;
+}
+
+.theme-gold .timeline-content .dates {
+  font-weight: 600;
+  color: #666;
+}
+
+.resume-container .summary,
+.resume-container .experience,
+.resume-container .education,
+.resume-container .projects,
+.resume-container .volunteer,
+.resume-container .references,
+.resume-container .certifications,
+.resume-container .summary-section,
+.resume-container .experience-section,
+.resume-container .education-section,
+.resume-container .languages-section,
+.resume-container .skills-section,
+.resume-container .certifications-section,
+.resume-container .industry-section,
+.resume-container .contact-section,
+.resume-container .section {
+  margin-bottom: var(--section-spacing, 20px);
+}

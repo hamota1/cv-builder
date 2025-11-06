@@ -1,0 +1,61 @@
+.settings-panel-horizontal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: var(--border-color, #f0f0f0);
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.settings-panel-horizontal .setting {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.settings-panel-horizontal label {
+  font-weight: 500;
+}
+
+.settings-panel-horizontal select {
+  background-color: rgba(0, 0, 0, 0.2);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  padding: 0.25rem 0.5rem;
+}
+
+/* Range Slider Styles */
+.settings-panel-horizontal input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 8px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  outline: none;
+}
+
+.settings-panel-horizontal input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border: 2px solid var(--border-color);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.settings-panel-horizontal input[type="range"]::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border: 2px solid var(--border-color);
+  border-radius: 50%;
+  cursor: pointer;
+}

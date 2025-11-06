@@ -1,0 +1,148 @@
+[
+  {
+    "id": "sidebar-teal",
+    "name": "Teal Sidebar",
+    "description": "Professional layout with a dark teal sidebar. (Style: Ryan Reynolds)",
+    "thumbnail": "/images/preview_sidebar_teal.png",
+    "layout": "teal-sidebar",
+    "theme": "teal"
+  },
+  {
+    "id": "sidebar-gold",
+    "name": "Executive Gold Sidebar",
+    "description": "Elegant black sidebar with gold accents. (Style: John James Doe)",
+    "thumbnail": "/images/preview_sidebar_gold.png",
+    "layout": "executive-gold-sidebar",
+    "theme": "gold"
+  },
+  {
+    "id": "sidebar-blue",
+    "name": "Classic Blue Sidebar",
+    "description": "Clean, friendly layout with a light blue sidebar. (Style: Name and Surname)",
+    "thumbnail": "/images/preview_sidebar_blue.png",
+    "layout": "light-blue-sidebar",
+    "theme": "blue"
+  },
+  {
+    "id": "sidebar-purple",
+    "name": "Creative Purple Sidebar",
+    "description": "Modern sidebar with purple accents. (Style: Chris Johnson)",
+    "thumbnail": "/images/preview_sidebar_purple.png",
+    "layout": "quadrant-purple",
+    "theme": "purple"
+  },
+  {
+    "id": "single-column-minimal",
+    "name": "Academic Minimalist",
+    "description": "Clean, single-column for academic use. (Style: Gilbert Lacroix)",
+    "thumbnail": "/images/preview_single_minimal.png",
+    "layout": "single-column",
+    "theme": "minimal-green"
+  },
+  {
+    "id": "single-column-bold",
+    "name": "Modern Bold",
+    "description": "Strong typography, single-column flow. (Style: Sam Mcdonald)",
+    "thumbnail": "/images/preview_single_bold.png",
+    "layout": "modern-bold",
+    "theme": "modern-teal"
+  },
+  {
+    "id": "single-column-accent",
+    "name": "Harvard Red Accent",
+    "description": "Minimalist, text-focused with red accents. (Style: YOUR NAME)",
+    "thumbnail": "/images/preview_single_accent.png",
+    "layout": "single-column",
+    "theme": "red-accent"
+  },
+
+  {
+    "id": "header-block",
+    "name": "Bold Header",
+    "description": "Strong design with a solid black name block. (Style: Mary Smith)",
+    "thumbnail": "/images/preview_header_block.png",
+    "layout": "header-block",
+    "theme": "block-black"
+  },
+  {
+    "id": "visual-block",
+    "name": "Visual Top Block",
+    "description": "A gold-colored block highlights the photo. (Style: Cirsten Jobs)",
+    "thumbnail": "/images/preview_visual_block.png",
+    "layout": "visual-block",
+    "theme": "visual-gold"
+  },
+  {
+    "id": "sidebar-visual-yellow",
+    "name": "Graphic Designer Yellow",
+    "description": "High-impact design with a dark sidebar. (Style: Nina Lane)",
+    "thumbnail": "/images/preview_sidebar_visual_yellow.png",
+    "layout": "visual-yellow",
+    "theme": "visual-yellow"
+  },
+  {
+    "id": "sidebar-classic-blue",
+    "name": "Marketing Pro Blue",
+    "description": "Professional layout, dark blue sidebar. (Style: Richard Sanchez)",
+    "thumbnail": "/images/preview_sidebar_classic_blue.png",
+    "layout": "classic-blue-sidebar",
+    "theme": "classic-blue"
+  },
+  {
+    "id": "header-summary-green",
+    "name": "Corporate Green",
+    "description": "Green header bar and a grey summary panel. (Style: Melanie Robinson)",
+    "thumbnail": "/images/preview_header_summary_green.png",
+    "layout": "corporate-green",
+    "theme": "corporate-green"
+  },
+  {
+    "id": "sidebar-pro-darkblue",
+    "name": "Software Engineer Pro",
+    "description": "Sharp, dark blue sidebar for tech roles. (Style: Your Name/Software Engineer)",
+    "thumbnail": "/images/preview_sidebar_pro_darkblue.png",
+    "layout": "software-engineer-pro",
+    "theme": "pro-darkblue"
+  },
+  {
+    "id": "header-summary-peach",
+    "name": "Soft Peach",
+    "description": "Friendly and modern with a soft peach header. (Style: Christine Smith)",
+    "thumbnail": "/images/preview_header_summary_peach.png",
+    "layout": "header-summary-peach",
+    "theme": "soft-peach"
+  },
+
+  {
+    "id": "single-column-minimal-plus",
+    "name": "Ultra Minimalist",
+    "description": "A pure, text-only, single-column document. (Style: CV Template Simple)",
+    "thumbnail": "/images/preview_single_minimal_plus.png",
+    "layout": "ultra-minimalist",
+    "theme": "ultra-minimal"
+  },
+  {
+    "id": "sidebar-yellow-header",
+    "name": "Bold Yellow Sidebar",
+    "description": "High-contrast with yellow sidebar, black block. (Style: NAME SURNAME)",
+    "thumbnail": "/images/preview_sidebar_yellow_header.png",
+    "layout": "yellow-header",
+    "theme": "sidebar-yellow-header"
+  },
+  {
+    "id": "narrow-sidebar-serif",
+    "name": "Elegant Serif",
+    "description": "Sophisticated layout with a narrow contact sidebar. (Style: Thomas Hamptone)",
+    "thumbnail": "/images/preview_narrow_sidebar_serif.png",
+    "layout": "elegant-serif",
+    "theme": "serif-minimal"
+  },
+  {
+    "id": "quadrant-simple",
+    "name": "Simple Quadrant",
+    "description": "A clean, four-quadrant layout with thin lines. (Style: Dani Schwaiger)",
+    "thumbnail": "/images/preview_quadrant_simple.png",
+    "layout": "quadrant",
+    "theme": "simple-quadrant"
+  }
+]

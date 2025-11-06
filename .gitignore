@@ -1,0 +1,15 @@
+
+# Dependencies
+/node_modules
+
+Production
+/build
+/dist
+
+Caching
+.cache
+.vite/
+
+Env
+.env.local
+.env

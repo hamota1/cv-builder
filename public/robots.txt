@@ -1,0 +1,3 @@
+/* robots.txt file for CV Builder */
+User-agent: *
+Allow: /

@@ -1,0 +1,383 @@
+
+/* ===== إعدادات عامة ===== */
+.header-split-container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  background-color: #f5f5f5;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== رأس الصفحة ===== */
+.header-white-block {
+  background-color: white;
+  border-bottom-left-radius: 50% 20%;
+  border-bottom-right-radius: 50% 20%;
+  padding: 40px 60px 80px;
+  position: relative;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.contact-info-left, .contact-info-right {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  font-size: 14px;
+  color: #555;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  margin: 0 15px;
+}
+
+.contact-item .icon::before {
+  margin-left: 5px;
+}
+
+.header-name-title {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.full-name {
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0;
+  color: #2c3e50;
+}
+
+.job-title {
+  font-size: 20px;
+  font-weight: 400;
+  margin: 5px 0 0;
+  color: #7f8c8d;
+}
+
+.profile-picture-split {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid white;
+  position: absolute;
+  bottom: -75px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== شبكة المحتوى ===== */
+.content-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 40px;
+  padding: 0 40px 40px;
+}
+
+/* ===== الأقسام ===== */
+.section {
+  margin-bottom: 30px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.section-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 15px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #3498db;
+  display: flex;
+  align-items: center;
+}
+
+.section-title .icon::before {
+  margin-left: 8px;
+  color: #3498db;
+}
+
+/* ===== المهارات ===== */
+.skills-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.skill-bar {
+  display: flex;
+  flex-direction: column;
+}
+
+.skill-name {
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.skill-level {
+  height: 8px;
+  background-color: #ecf0f1;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.skill-progress {
+  height: 100%;
+  background-color: #3498db;
+  border-radius: 4px;
+}
+
+/* ===== اللغات ===== */
+.languages-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.languages-list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #ecf0f1;
+}
+
+.language-name {
+  font-weight: 500;
+}
+
+.language-level {
+  color: #7f8c8d;
+}
+
+/* ===== الشهادات ===== */
+.certifications-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.certifications-list li {
+  margin-bottom: 15px;
+}
+
+.cert-name {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.cert-issuer {
+  font-size: 14px;
+  color: #7f8c8d;
+}
+
+/* ===== الخط الزمني ===== */
+.timeline {
+  position: relative;
+  margin: 0;
+  padding-left: 30px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 2px;
+  background: #3498db;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -34px;
+  top: 5px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #3498db;
+  border: 2px solid white;
+}
+
+.timeline-date {
+  font-size: 14px;
+  color: #7f8c8d;
+  margin-bottom: 5px;
+}
+
+.timeline-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 5px;
+}
+
+.timeline-subtitle {
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.timeline-location {
+  font-size: 14px;
+  color: #7f8c8d;
+  margin-bottom: 8px;
+}
+
+.timeline-description {
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ===== المشاريع ===== */
+.projects-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.project-item {
+  border-left: 3px solid #3498db;
+  padding-left: 15px;
+}
+
+.project-name {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 8px;
+}
+
+.project-description {
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0 0 10px;
+}
+
+.project-technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tech-tag {
+  background-color: #ecf0f1;
+  color: #3498db;
+  font-size: 12px;
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+/* ===== المراجع ===== */
+.references-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.reference-item {
+  padding: 15px;
+  background-color: #f8f9fa;
+  border-radius: 6px;
+}
+
+.reference-name {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.reference-position {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 3px;
+}
+
+.reference-company {
+  font-size: 14px;
+  color: #7f8c8d;
+  margin-bottom: 8px;
+}
+
+.reference-contact {
+  font-size: 13px;
+  color: #7f8c8d;
+}
+
+/* ===== أيقونات ===== */
+.icon::before {
+  display: inline-block;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 16px;
+}
+
+.icon[data-icon="phone"]::before { content: ""; }
+.icon[data-icon="location"]::before { content: ""; }
+.icon[data-icon="email"]::before { content: ""; }
+.icon[data-icon="linkedin"]::before { content: ""; }
+.icon[data-icon="summary"]::before { content: ""; }
+.icon[data-icon="skills"]::before { content: ""; }
+.icon[data-icon="languages"]::before { content: ""; }
+.icon[data-icon="certifications"]::before { content: ""; }
+.icon[data-icon="experience"]::before { content: ""; }
+.icon[data-icon="education"]::before { content: ""; }
+.icon[data-icon="projects"]::before { content: ""; }
+.icon[data-icon="volunteering"]::before { content: ""; }
+.icon[data-icon="references"]::before { content: ""; }
+
+/* ===== تصميم متجاوب ===== */
+@media (max-width: 992px) {
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .header-white-block {
+    padding: 30px 40px 70px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-white-block {
+    padding: 20px 30px 60px;
+  }
+
+  .contact-info-left, .contact-info-right {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .profile-picture-split {
+    width: 120px;
+    height: 120px;
+    bottom: -60px;
+  }
+
+  .full-name {
+    font-size: 28px;
+  }
+
+  .job-title {
+    font-size: 18px;
+  }
+
+  .content-grid {
+    padding: 0 20px 30px;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .references-list {
+    grid-template-columns: 1fr;
+  }
+}

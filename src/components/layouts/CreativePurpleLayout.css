@@ -1,0 +1,105 @@
+.creative-grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  grid-template-rows: auto 1fr;
+  width: 100%;
+  min-height: 1123px; /* A4 paper height */
+  font-family: var(--font-family), sans-serif;
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+  letter-spacing: var(--letter-spacing);
+  background: #fff;
+}
+
+.grid-top-left,
+.grid-bottom-left {
+  background-color: #F2E7FE; /* Light Purple */
+  color: #3C006B; /* Deep Purple */
+  padding: 2rem;
+}
+
+.grid-top-right,
+.grid-bottom-right {
+  background-color: #FFFFFF; /* White */
+  color: #333;
+  padding: 2rem;
+  border-left: 1px solid #eee;
+}
+
+.grid-top-left h2 {
+  font-size: 1.8rem;
+  margin: 0 0 0.25rem 0;
+  font-weight: 600;
+}
+
+.grid-top-left .job-title {
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+}
+
+.contact-info p {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 8px 0;
+  font-size: 0.9rem;
+}
+
+section {
+  margin-bottom: var(--section-spacing);
+}
+
+section:last-child {
+  margin-bottom: 0;
+}
+
+section h3 {
+  color: #3C006B;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+  border-bottom: 2px solid #D1B2FF;
+  padding-bottom: 6px;
+  margin-bottom: 1rem;
+}
+
+.grid-bottom-left section h3 {
+    border-bottom-color: #3C006B;
+}
+
+.item {
+  margin-bottom: 1rem;
+}
+
+.item:last-child {
+    margin-bottom: 0;
+}
+
+.item strong {
+  font-weight: 600;
+}
+
+.item .sub-heading {
+    font-size: 0.9em;
+    font-style: italic;
+    color: #555;
+    margin: 2px 0 5px 0;
+}
+
+.item ul {
+    list-style-position: outside;
+    padding-left: 1.2em;
+    margin-top: 5px;
+}
+
+.skills-list {
+  list-style: none;
+  padding: 0;
+  columns: 2;
+}
+
+.skills-list li {
+    margin-bottom: 5px;
+}

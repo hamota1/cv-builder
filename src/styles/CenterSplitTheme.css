@@ -1,0 +1,303 @@
+/* Styles for the Center Split Theme */
+
+/* Base styles for the resume container */
+.resume-container.center-split-layout {
+  --accent-color: #5F737C; /* Dark Slate Grey/Cadet Grey */
+  --body-text-color: #333333; /* Dark Grey */
+  --light-grey-bg: #F5F5F5; /* Off-white */
+  --white-bg: #FFFFFF; /* White */
+
+  background-color: var(--light-grey-bg); /* Light grey background for the whole page */
+  display: block; /* Important: Override flex from base to manage layout with position */
+  min-height: 100vh;
+  position: relative;
+  width: 8.5in; /* Keep fixed width */
+  margin: 0 auto; /* Center the resume */
+  box-shadow: 0 0 15px rgba(0,0,0,0.15);
+  padding: 0; /* Remove padding from container itself */
+}
+
+/* Header Block with Curved Edge */
+.resume-container.center-split-layout .header-split-top {
+  background-color: var(--white-bg);
+  padding: 2rem 1.5rem 2rem 1.5rem; /* Reduced padding-bottom */
+  position: relative;
+  /* Curved bottom edge */
+  border-bottom-left-radius: 50% 20%;
+  border-bottom-right-radius: 50% 20%;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  margin-bottom: 6rem; /* Increased margin-bottom to compensate for image overlap */
+  overflow: hidden; /* Important for containing rounded corners reliably */
+}
+
+.resume-container.center-split-layout .header-content-split {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
+  z-index: 1; /* Ensure content is above curved edge */
+}
+
+.resume-container.center-split-layout .header-center-text {
+  text-align: center;
+  flex-grow: 1;
+  margin: 0 2rem;
+}
+
+.resume-container.center-split-layout .header-split-top h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700; /* Bold/Heavy */
+  font-size: 2.8rem; /* Very large */
+  color: var(--accent-color);
+  text-transform: uppercase;
+  letter-spacing: 3px; /* Wide letter spacing */
+  margin: 0;
+  line-height: 1.2;
+}
+
+.resume-container.center-split-layout .job-title-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+
+.resume-container.center-split-layout .job-title-line {
+  display: block;
+  width: 30px;
+  height: 1px;
+  background-color: var(--accent-color);
+  margin: 0 10px;
+}
+
+.resume-container.center-split-layout .header-split-top .job-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300; /* Light */
+  font-size: 1.1rem; /* Medium */
+  color: var(--accent-color);
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.resume-container.center-split-layout .contact-info-split {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--body-text-color);
+}
+
+.resume-container.center-split-layout .contact-info-split p {
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.resume-container.center-split-layout .contact-info-split i {
+  color: var(--accent-color); /* Icons in accent color */
+  margin-right: 0.5rem;
+  font-size: 1rem;
+}
+
+.resume-container.center-split-layout .profile-image-split-container {
+  position: absolute;
+  bottom: -75px; /* Half of image height (150px) to overlap the curved edge */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150px; /* Size of the circular image */
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  z-index: 2; /* Ensure image is above header and content */
+  background-color: var(--white-bg); /* Background for the circle itself to cover */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.resume-container.center-split-layout .profile-image-split {
+  width: 140px; /* Image size slightly smaller than container to show border */
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--accent-color); /* Accent color border */
+}
+
+/* Content Columns Layout */
+.resume-container.center-split-layout .split-content-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr; /* Left column 1 part, Right column 1.5 parts */
+  gap: 30px; /* Space between columns */
+  padding: 2rem 0; /* Padding for content below header and image */
+  align-items: flex-start; /* Align columns at the top */
+}
+
+.resume-container.center-split-layout .column-left-grid,
+.resume-container.center-split-layout .column-right-grid {
+  padding: 0 1.5rem; /* Padding within columns */
+}
+
+/* Remove the border as gap provides separation */
+.resume-container.center-split-layout .column-left-grid {
+  border-right: none;
+}
+
+.resume-container.center-split-layout section {
+  margin-bottom: 2rem;
+}
+
+.resume-container.center-split-layout h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700; /* Bold */
+  font-size: 1.4rem; /* Medium-large */
+  color: var(--accent-color);
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  white-space: nowrap; /* Prevent icon and text from wrapping prematurely */
+}
+
+.resume-container.center-split-layout h2 i {
+  margin-right: 0.8rem;
+  font-size: 1.5rem;
+  color: var(--accent-color); /* Icon color */
+}
+
+.resume-container.center-split-layout h2::after {
+  content: '';
+  display: block;
+  flex-grow: 1; /* Take up remaining space */
+  height: 1px;
+  background-color: var(--accent-color);
+  margin-left: 1rem;
+}
+
+.resume-container.center-split-layout p,
+.resume-container.center-split-layout li {
+  font-size: 0.9rem;
+  color: var(--body-text-color);
+  line-height: 1.6;
+}
+
+/* Skill Bars (Slider-style) */
+.resume-container.center-split-layout .skill-item-split {
+  margin-bottom: 1.5rem;
+}
+
+.resume-container.center-split-layout .skill-name-split {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--body-text-color);
+}
+
+.resume-container.center-split-layout .skill-bar-split-container {
+  width: 100%;
+  height: 6px; /* Track height */
+  background-color: rgba(0,0,0,0.1); /* Light grey track */
+  border-radius: 3px;
+  position: relative;
+}
+
+.resume-container.center-split-layout .skill-bar-split-fill {
+  height: 100%;
+  background-color: var(--accent-color); /* Progress bar color */
+  border-radius: 3px;
+  position: relative;
+}
+
+.resume-container.center-split-layout .skill-bar-split-handle {
+  width: 16px;
+  height: 16px;
+  background-color: var(--white-bg); /* White handle */
+  border: 2px solid var(--accent-color); /* Accent color border */
+  border-radius: 50%;
+  position: absolute;
+  right: -8px; /* Half of handle width to center it */
+  top: 50%;
+  transform: translateY(-50%);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* Timeline for Experience and Education */
+.resume-container.center-split-layout .timeline-split-container {
+  position: relative;
+  padding-left: 25px; /* Space for the vertical line */
+  margin-left: 5px;
+}
+
+.resume-container.center-split-layout .timeline-split-container::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; bottom: 0; /* Position full height */
+  width: 2px;
+  background-color: var(--accent-color); /* Accent color vertical line */
+}
+
+.resume-container.center-split-layout .timeline-split-item {
+  position: relative;
+  margin-bottom: 2rem;
+  padding-left: 20px; /* Space for the dot */
+}
+
+.resume-container.center-split-layout .timeline-split-dot {
+  position: absolute;
+  left: -7px; /* Position the dot on the line */
+  top: 0.3rem;
+  width: 14px;
+  height: 14px;
+  background-color: var(--accent-color); /* Accent color circular dot */
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px var(--light-grey-bg); /* Light grey border around dot */
+}
+
+.resume-container.center-split-layout .timeline-split-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+}
+
+.resume-container.center-split-layout .timeline-split-content h3 {
+  flex-basis: 40%; /* Role/Degree on the left */
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--body-text-color);
+  margin-bottom: 0.25rem;
+  padding-right: 1rem; /* Add some space */
+}
+
+.resume-container.center-split-layout .timeline-split-content .right-content {
+  flex-basis: 60%; /* Dates, Company/University, Achievements on the right */
+  display: flex;
+  flex-direction: column;
+}
+
+.resume-container.center-split-layout .timeline-split-content .timeline-split-dates {
+  font-weight: 600;
+  color: var(--body-text-color);
+  margin-bottom: 0.25rem;
+}
+
+.resume-container.center-split-layout .timeline-split-content p {
+  font-size: 0.85rem;
+  color: var(--body-text-color);
+  margin-bottom: 0.5rem;
+}
+
+.resume-container.center-split-layout .timeline-split-content .achievements {
+  padding-left: 0;
+}
+
+.resume-container.center-split-layout .timeline-split-content .achievements ul {
+  list-style-type: disc;
+  padding-left: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+.resume-container.center-split-layout .timeline-split-content .achievements li {
+  font-size: 0.85rem;
+  color: var(--body-text-color);
+  margin-bottom: 0.5rem;
+}

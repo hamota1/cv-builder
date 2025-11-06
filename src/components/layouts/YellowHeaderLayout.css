@@ -1,0 +1,117 @@
+/* Main container for the layout */
+.yellow-header-layout {
+  position: relative; /* Establishes a positioning context */
+  min-height: 100vh;
+  background-color: #FFFFFF; /* The outer page color */
+  padding-top: 4rem;    /* White margin at the top */
+  padding-left: calc(4rem + 320px);   /* White margin on the left + yellow bar width */
+  overflow: hidden; /* Prevents scrollbars from absolute elements */
+  font-family: var(--font-family), sans-serif;
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+  letter-spacing: var(--letter-spacing);
+}
+
+/* The horizontal black bar */
+.yh-header-block {
+  position: absolute;
+  top: 4rem; /* Position below the top margin */
+  left: 0;  /* Stretch to the left edge of the viewport */
+  right: 0; /* Stretch to the right edge of the viewport */
+  height: 150px; /* Fixed height */
+  background-color: #000000;
+  color: #FFFFFF;
+  z-index: 1; /* Below the yellow bar */
+  display: grid;
+  grid-template-columns: calc(4rem + 320px) 1fr; /* 1st col = spacer, 2nd col = content */
+  text-transform: uppercase;
+}
+
+.yh-header-text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.yh-header-block h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.yh-header-block h2 {
+  font-size: 1.2rem;
+  font-weight: normal;
+  margin: 0;
+}
+
+/* The vertical yellow bar */
+.yh-left-column {
+  position: absolute;
+  top: 0; /* Stretch to the top edge of the viewport */
+  left: 4rem; /* Position after the left margin */
+  bottom: 0; /* Stretch to the bottom edge of the viewport */
+  width: 320px;
+  background-color: #FFD700;
+  z-index: 2; /* Above the black bar */
+  overflow-wrap: break-word;
+  padding: 2rem;
+  padding-top: calc(4rem + 150px + 100px); /* top margin + black bar height + half picture height */
+}
+
+/* The overlapping profile picture */
+.yh-profile-picture-container {
+  position: absolute;
+  top: calc(4rem + 75px - 90px); /* top margin + half black bar height - half picture height */
+  left: calc(4rem + 160px - 90px); /* left margin + half yellow bar width - half picture width */
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 5px solid #FFFFFF;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  z-index: 3; /* On top of everything */
+}
+
+.yh-profile-picture {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* The main content area to the right */
+.yh-right-column {
+  margin-left: 4rem; /* Push content to the right */
+  padding-top: 150px; /* Create space below the black bar */
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-bottom: 2rem;
+}
+
+/* General section styling */
+.yh-section {
+  margin-bottom: var(--section-spacing);
+}
+
+.yh-section h3 {
+  font-size: 1.4rem;
+  font-weight: bold;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #ccc;
+}
+
+.yh-left-column .yh-section h3 {
+    border-bottom-color: #000;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+ul li {
+  margin-bottom: 0.5rem;
+}
