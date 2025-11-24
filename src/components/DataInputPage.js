@@ -51,22 +51,25 @@ const DataInputPage = () => {
 
 
   // Personal info handlers
-      const handlePersonalChange = (field, value) => {
-          setResumeData(prev => ({
-              ...prev,
-              personal: {
-                  ...prev.personal,
-                  [field]: typeof value === 'string' ? value.trim() : value
-              }
-          }));
-      };
+  const handlePersonalChange = (field, value) => {
+    setResumeData(prev => ({
+      ...prev,
+      personal: {
+        ...prev.personal,
+        [field]: typeof value === 'string' ? value.trim() : value
+      }
+    }));
+  };
   const handleProfilePictureChange = (e) => {
     if (e.target.files && e.target.files.length > 0) {
       setCrop(undefined) // Makes crop preview update between images.
       const reader = new FileReader();
-      reader.addEventListener('load', () =>
-        setImgSrc(reader.result.toString() || ''),
-      );
+      reader.addEventListener('load', () => {
+        const result = reader.result.toString() || '';
+        setImgSrc(result);
+        // Save original image to resumeData for re-editing
+        handlePersonalChange('originalProfilePicture', result);
+      });
       reader.readAsDataURL(e.target.files[0]);
     }
   };
@@ -76,8 +79,8 @@ const DataInputPage = () => {
     const crop = centerCrop(
       makeAspectCrop(
         {
-          unit: '%',
-          width: 90,
+          unit: 'px', // Use pixels to avoid mismatch issues
+          width: Math.min(width, height) * 0.9, // 90% of the smaller dimension
         },
         1,
         width,
@@ -117,6 +120,20 @@ const DataInputPage = () => {
     handlePersonalChange('profilePicture', base64Image);
     setImgSrc('');
   }
+
+  const handleEditProfilePicture = () => {
+    // Use original image if available, otherwise fallback to current (which might be already cropped)
+    const originalImage = resumeData.personal.originalProfilePicture || resumeData.personal.profilePicture;
+    if (originalImage) {
+      setImgSrc(originalImage);
+      setCrop(undefined); // Reset crop to force new initialization
+    }
+  };
+
+  const handleCancelCrop = () => {
+    setImgSrc('');
+    setCrop(undefined);
+  };
 
   // Summary handler
   const handleSummaryChange = (value) => {
@@ -168,9 +185,9 @@ const DataInputPage = () => {
       experience: prev.experience.map((exp, i) =>
         i === index
           ? {
-              ...exp,
-              achievements: exp.achievements.filter((_, j) => j !== achievementIndex)
-            }
+            ...exp,
+            achievements: exp.achievements.filter((_, j) => j !== achievementIndex)
+          }
           : exp
       )
     }));
@@ -182,11 +199,11 @@ const DataInputPage = () => {
       experience: prev.experience.map((exp, i) =>
         i === index
           ? {
-              ...exp,
-              achievements: (exp.achievements || []).map((achievement, j) =>
-                j === achievementIndex ? value : achievement
-              )
-            }
+            ...exp,
+            achievements: (exp.achievements || []).map((achievement, j) =>
+              j === achievementIndex ? value : achievement
+            )
+          }
           : exp
       )
     }));
@@ -234,9 +251,9 @@ const DataInputPage = () => {
       education: prev.education.map((edu, i) =>
         i === index
           ? {
-              ...edu,
-              achievements: edu.achievements.filter((_, j) => j !== achievementIndex)
-            }
+            ...edu,
+            achievements: edu.achievements.filter((_, j) => j !== achievementIndex)
+          }
           : edu
       )
     }));
@@ -248,11 +265,11 @@ const DataInputPage = () => {
       education: prev.education.map((edu, i) =>
         i === index
           ? {
-              ...edu,
-              achievements: (edu.achievements || []).map((achievement, j) =>
-                j === achievementIndex ? value : achievement
-              )
-            }
+            ...edu,
+            achievements: (edu.achievements || []).map((achievement, j) =>
+              j === achievementIndex ? value : achievement
+            )
+          }
           : edu
       )
     }));
@@ -334,9 +351,9 @@ const DataInputPage = () => {
       projects: prev.projects.map((project, i) =>
         i === index
           ? {
-              ...project,
-              achievements: project.achievements.filter((_, j) => j !== achievementIndex)
-            }
+            ...project,
+            achievements: project.achievements.filter((_, j) => j !== achievementIndex)
+          }
           : project
       )
     }));
@@ -348,11 +365,11 @@ const DataInputPage = () => {
       projects: prev.projects.map((project, i) =>
         i === index
           ? {
-              ...project,
-              achievements: (project.achievements || []).map((achievement, j) =>
-                j === achievementIndex ? value : achievement
-              )
-            }
+            ...project,
+            achievements: (project.achievements || []).map((achievement, j) =>
+              j === achievementIndex ? value : achievement
+            )
+          }
           : project
       )
     }));
@@ -400,9 +417,9 @@ const DataInputPage = () => {
       volunteer: prev.volunteer.map((vol, i) =>
         i === index
           ? {
-              ...vol,
-              achievements: vol.achievements.filter((_, j) => j !== achievementIndex)
-            }
+            ...vol,
+            achievements: vol.achievements.filter((_, j) => j !== achievementIndex)
+          }
           : vol
       )
     }));
@@ -414,11 +431,11 @@ const DataInputPage = () => {
       volunteer: prev.volunteer.map((vol, i) =>
         i === index
           ? {
-              ...vol,
-              achievements: (vol.achievements || []).map((achievement, j) =>
-                j === achievementIndex ? value : achievement
-              )
-            }
+            ...vol,
+            achievements: (vol.achievements || []).map((achievement, j) =>
+              j === achievementIndex ? value : achievement
+            )
+          }
           : vol
       )
     }));
@@ -466,9 +483,9 @@ const DataInputPage = () => {
       references: prev.references.map((ref, i) =>
         i === index
           ? {
-              ...ref,
-              achievements: ref.achievements.filter((_, j) => j !== achievementIndex)
-            }
+            ...ref,
+            achievements: ref.achievements.filter((_, j) => j !== achievementIndex)
+          }
           : ref
       )
     }));
@@ -480,11 +497,11 @@ const DataInputPage = () => {
       references: prev.references.map((ref, i) =>
         i === index
           ? {
-              ...ref,
-              achievements: (ref.achievements || []).map((achievement, j) =>
-                j === achievementIndex ? value : achievement
-              )
-            }
+            ...ref,
+            achievements: (ref.achievements || []).map((achievement, j) =>
+              j === achievementIndex ? value : achievement
+            )
+          }
           : ref
       )
     }));
@@ -509,7 +526,7 @@ const DataInputPage = () => {
               className="file-input"
             />
             {imgSrc && (
-              <div>
+              <div className="crop-container">
                 <ReactCrop
                   crop={crop}
                   onChange={c => setCrop(c)}
@@ -517,7 +534,10 @@ const DataInputPage = () => {
                 >
                   <img ref={imgRef} src={imgSrc} onLoad={handleImageLoad} alt="Crop me" />
                 </ReactCrop>
-                <button onClick={handleSaveCrop}>Save Image</button>
+                <div className="crop-controls">
+                  <button onClick={handleSaveCrop} className="btn-primary">Save Image</button>
+                  <button onClick={handleCancelCrop} className="btn-secondary">Cancel</button>
+                </div>
               </div>
             )}
             {resumeData.personal.profilePicture && !imgSrc && (
@@ -527,6 +547,9 @@ const DataInputPage = () => {
                   alt="Profile Preview"
                   className="profile-image-preview"
                 />
+                <button onClick={handleEditProfilePicture} className="btn-secondary btn-sm" style={{ marginTop: '10px' }}>
+                  Edit / Crop Again
+                </button>
               </div>
             )}
           </div>

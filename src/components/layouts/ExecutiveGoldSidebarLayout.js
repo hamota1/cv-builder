@@ -1,4 +1,5 @@
 import React from 'react';
+import './ExecutiveGoldSidebarLayout.css';
 
 
 const ExecutiveGoldSidebarLayout = ({ data, theme }) => {
